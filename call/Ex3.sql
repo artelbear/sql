@@ -9,8 +9,8 @@ ORDER BY `name` DESC;
 -- 2
 -- Список альбомов конкретного испонителя
 
-SELECT `name`
-FROM `albums`
+SELECT `title`
+FROM `album`
 WHERE `author_id` = 1;
 
 
@@ -18,7 +18,7 @@ WHERE `author_id` = 1;
 -- Описание всех жанров в обратном порядке
 
 SELECT `description`
-FROM `genres`
+FROM `genre`
 ORDER BY `id` DESC;
 
 
@@ -26,11 +26,11 @@ ORDER BY `id` DESC;
 -- Первые и последние 3 песни по дате
 
 SELECT `name`
-FROM `tracks`
-ORDER BY `year` ASC
+FROM `track`
+ORDER BY `publish_date` ASC
 LIMIT 0, 3;
 
 SELECT `name`
-FROM `tracks`
-ORDER BY `year` DESC
+FROM `track`
+ORDER BY `publish_date` DESC
 LIMIT 0, 3;
